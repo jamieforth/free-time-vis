@@ -1,0 +1,31 @@
+{
+  "name": "free-time-vis",
+  "version": "0.0.1",
+  "description": "Free-time sensor data visualisations using p5.js.",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamieforth/free-time-vis.git"
+  },
+  "author": "Jamie Forth",
+  "license": "GPL3",
+  "bugs": {
+    "url": "https://github.com/jamieforth/free-time-vis/issues"
+  },
+  "homepage": "https://github.com/jamieforth/free-time-vis#readme",
+  "devDependencies": {
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "osc-js": "^2.0.2",
+    "p5": "^0.7.3"
+  }
+}

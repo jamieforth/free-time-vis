@@ -1,0 +1,23 @@
+env:
+  browser: true
+  es6: true
+extends: 'eslint:recommended'
+parserOptions:
+  sourceType: module
+rules:
+  indent:                       # This should match brackets.
+    - error
+    - 2
+  # no-unused-vars:               # For defining p5 setup and draw etc.
+  #   - off
+  # no-undef:                     # For calling p5 globals
+  #   - off
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - single
+  semi:
+    - error
+    - always
