@@ -1,6 +1,7 @@
 # free-time-vis
 
 ``` sh
+npm install
 npm run build
 ```
 
