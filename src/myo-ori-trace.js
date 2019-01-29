@@ -7,16 +7,6 @@ export function MyoOriTrace(s, ds) {
   // characters.
   this.id = 'myo-ori-trace';
 
-  // Preload the data. This function is called automatically by the
-  // gallery when a visualisation is added.
-  // this.preload = None
-
-  this.setup = function() {
-  };
-
-  this.destroy = function() {
-  };
-
   this.draw = function() {
 
     var n = 250; // ds.data.length;

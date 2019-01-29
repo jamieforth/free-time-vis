@@ -7,19 +7,12 @@ export function ConsoleLines(s, ds) {
   // characters.
   this.id = 'console-lines';
 
-  // Preload the data. This function is called automatically by the
-  // gallery when a visualisation is added.
-  // this.preload = None
-
   var xLinePad = s.width / ds.histLength;
   var yLinePad = 20;
   var scale = 0.3;
 
   this.setup = function() {
     s.textFont('DejaVu Sans Mono');
-  };
-
-  this.destroy = function() {
   };
 
   this.draw = function() {
