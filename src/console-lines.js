@@ -43,20 +43,27 @@ export function ConsoleLines(s, ds) {
   };
 
   this.lines = function() {
-    var segmentLength = s.width / ds.histLength;
-    var ndim = ds.ndim();
-    var lineHeight = s.height / ds.ndim();
-    var scale = 0.3;
+    let segmentLength = s.width / ds.histLength;
+    let ndim = ds.ndim();
+    let lineHeight = s.height / ndim;
+    let toMin = lineHeight / 2;
+    let toMax = -lineHeight / 2;
 
     // Draw a line for each dimension.
     s.stroke(255, 255, 255, 255);
     for (let i = 0; i < ds.data.length - 1; i++) {
       Object.keys(ds.data[i]).forEach((key, j) => {
+        let fromMin = ds.min(key);
+        let fromMax = ds.max(key);
         s.line(
           i * segmentLength,
-          (ds.data[i][key] * scale) + (lineHeight * (j + 1)),
+          s.map(ds.data[i][key], fromMin, fromMax, toMin, toMax)
+            + (lineHeight * j)
+            + (lineHeight / 2),
           (i + 1) * segmentLength,
-          (ds.data[i + 1][key] * scale) + (lineHeight * (j + 1))
+          s.map(ds.data[i + 1][key], fromMin, fromMax, toMin, toMax)
+            + (lineHeight * j)
+            + (lineHeight / 2)
         );
       });
     }
