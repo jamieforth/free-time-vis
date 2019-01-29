@@ -13,7 +13,7 @@
     "url": "git+https://github.com/jamieforth/free-time-vis.git"
   },
   "author": "Jamie Forth",
-  "license": "GPL3",
+  "license": "GPL-3.0-or-later",
   "bugs": {
     "url": "https://github.com/jamieforth/free-time-vis/issues"
   },
