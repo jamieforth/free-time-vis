@@ -28,8 +28,11 @@ export function DataSource(histLength=500) {
       .reduce(maxCallback, -Infinity);
   };
 
-  this.ndim = () => {
+  this.range = (key) => {
+    return this.max(key) - this.min(key);
+  };
 
+  this.ndim = () => {
     if (this.data.length > 0) {
       return Object.keys(this.data[0]).length;
     } else {
